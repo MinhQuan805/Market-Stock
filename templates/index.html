@@ -30,18 +30,8 @@
             <form action="/" method="POST" name="validate-date">
                 <label for="start-date">Start Date</label>
                 <input class="your-date" type="text" name="start_input" id="start-date" placeholder="{{ start }}">
-                {% if error_start %}
-                    <div class="error-message" style="color: red; margin-bottom: 15px;">
-                        {{ error_start }}
-                    </div>
-                {% endif %}
                 <label for="end-date">End Date</label>
                 <input class="your-date" type="text" name="end_input" id="end-date" placeholder="{{ end }}">
-                {% if error_end %}
-                    <div class="error-message" style="color: red; margin-bottom: 15px;">
-                        {{ error_end }}
-                    </div>
-                {% endif %}
                 <div class="button-group">
                     <button type ="submit" class="done-btn actions">Done</button>
                     <button type="button" onclick="cancelSelection()" class="cancel-btn actions">Cancel</button>
