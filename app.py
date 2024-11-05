@@ -4,6 +4,8 @@ from flask import Flask, render_template, request, session, flash
 from flask_session import Session
 from datetime import datetime
 from helpers import apology
+import os
+
 app = Flask(__name__)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
@@ -51,4 +53,5 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
